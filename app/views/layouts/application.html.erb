@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AconteceNoCampus</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body> <ul>
+<% %w[campus usuarios eventos].each do |controller_name| %> <li>
+<%= link_to controller_name, controller: controller_name %> </li>
+<% end %>
+</ul>
+<%= yield %>
+</body>
+</html>

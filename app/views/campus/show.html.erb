@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @campu.nome %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @campu.endereco %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @campu.numero %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @campu.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @campu.cidade %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @campu.uf %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @campu.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @campu.email %>
+</p>
+
+<%= link_to 'Edit', edit_campu_path(@campu) %> |
+<%= link_to 'Back', campus_path %>

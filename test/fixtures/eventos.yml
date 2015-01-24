@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  descricao: MyString
+  local: MyString
+  cronograma: MyString
+  contatos: MyString
+  inicio: 2015-01-24 17:39:11
+  fim: 2015-01-24 17:39:11
+
+two:
+  nome: MyString
+  descricao: MyString
+  local: MyString
+  cronograma: MyString
+  contatos: MyString
+  inicio: 2015-01-24 17:39:11
+  fim: 2015-01-24 17:39:11
