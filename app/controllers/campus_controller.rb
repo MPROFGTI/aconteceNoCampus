@@ -28,7 +28,7 @@ class CampusController < ApplicationController
 
     respond_to do |format|
       if @campu.save
-        format.html { redirect_to @campu, notice: 'Campu was successfully created.' }
+        format.html { redirect_to @campu, notice: 'Campu was teste successfully created.' }
         format.json { render :show, status: :created, location: @campu }
       else
         format.html { render :new }
