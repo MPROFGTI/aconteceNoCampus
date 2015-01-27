@@ -24,16 +24,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem do heroku
 gem 'heroku'
-
+# gem que especifica a versao do ruby
 gem 'ruby'
-# colocando o sqlite3 para desenvolviemnto e teste 
-gem 'sqlite3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-gem 'unicorn'
+#gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -48,12 +46,18 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
+  # colocando o sqlite3 para desenvolviemnto e teste 
+  gem 'sqlite3'
+  
 end
 
 group :production do
   # colocando o postegres para producao
   gem 'pg'
+
+  # gem necessaria para o heroku
   gem 'rails_12factor'
+ 
   # colocando um servidor mais parrudo
   gem 'unicorn'
 end
