@@ -51,6 +51,7 @@ end
 group :production do
   # colocando o postegres para producao
   gem 'pg'
+  gem 'rails_12factor'
   # colocando um servidor mais parrudo
   gem 'thin'
 end
