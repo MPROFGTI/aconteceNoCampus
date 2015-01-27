@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+    # You can have the root of your site routed with "root"
+  root 'eventos#index'
   resources :eventos
 
   resources :usuarios
