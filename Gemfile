@@ -27,7 +27,7 @@ gem 'heroku'
 
 gem 'ruby'
 # colocando o sqlite3 para desenvolviemnto e teste 
-# gem 'sqlite3'
+gem 'sqlite3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
