@@ -1,3 +1,22 @@
+<script type="text/javascript">
+  
+  var initialize;
+  initialize = function() {
+    var coord ="<%= @evento.local %>";
+    var x = coord.split(",");
+    var mapOptions = {
+      center: new google.maps.LatLng(x[0],x[1]),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+    mapOptions);
+  }
+  $(document).ready(initialize);
+  $(document).on('page:load', initialize);
+</script>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>

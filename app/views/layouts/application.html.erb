@@ -5,7 +5,9 @@
   <title>AconteceNoCampus</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href="css/bootstraps.css" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- <link href="css/bootstraps.css" rel="stylesheet"> -->
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -17,20 +19,9 @@
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCLpvObs66-pCbaxZxJ1Fq9aNtjmnHC8U0&sensor=TRUE">
   </script>
   <script type="text/javascript">
-    function initialize() {
-      var coord ="<%= @evento.local if defined?(@evento.local) %>";
-      var x = coord.split(",");
-      var mapOptions = {
-	center: new google.maps.LatLng(x[0],x[1]),
-	zoom: 8,
-	mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("map-canvas"),
-	  mapOptions);
-    }
   </script>
 </head>
-<body onload="initialize()" > 
+<body> 
   <ul><!--
   <% %w[campus usuarios eventos].each do |controller_name| %> <li>
   <%= link_to controller_name, controller: controller_name %> </li>
@@ -56,6 +47,5 @@
   <div class="container">    
     <%= yield %>
   </div>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
