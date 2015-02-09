@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem do heroku
 gem 'heroku'
+gem 'rails_12factor', group: :production
 # gem que especifica a versao do ruby
 gem 'ruby'
 
@@ -62,3 +63,4 @@ group :production do
   gem 'unicorn'
 end
 
+ruby "2.2.0"
