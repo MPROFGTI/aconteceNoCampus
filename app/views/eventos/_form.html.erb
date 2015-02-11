@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :descricao %><br>
-    <%= f.text_field :descricao %>
+    <%= f.text_field :descricao , :class => 'cus-text-area ' %>
   </div>
   <div class="field">
     <%= f.label :local %><br>
@@ -40,6 +40,6 @@
     <%= f.datetime_select :fim %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  :class => 'btn btn-primary' %>
   </div>
 <% end %>
