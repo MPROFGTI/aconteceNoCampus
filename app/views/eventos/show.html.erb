@@ -16,6 +16,7 @@
   $(document).on('page:load', initialize);
 </script>
 
+
 <div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <p id="notice"><%= notice %></p>
@@ -53,12 +54,12 @@
 
 <p>
   <strong>Inicio:</strong>
-  <%= @evento.inicio %>
+  <%= l @evento.inicio %>
 </p>
 
 <p>
   <strong>Fim:</strong>
-  <%= @evento.fim %>
+  <%= l @evento.fim %>
 </p>
 
 <%= link_to 'Editar', edit_evento_path(@evento) %> |
