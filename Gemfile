@@ -38,7 +38,7 @@ gem 'ruby'
 # gem 'capistrano-rails', group: :development
 
 gem 'start'
-
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -65,4 +65,4 @@ group :production do
   gem 'unicorn'
 end
 
-ruby "2.2.0"
+#ruby "2.2.0"

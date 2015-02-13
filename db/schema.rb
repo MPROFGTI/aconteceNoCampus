@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124193911) do
+ActiveRecord::Schema.define(version: 20150213031136) do
 
   create_table "campus", force: :cascade do |t|
     t.string   "nome"
@@ -34,8 +34,12 @@ ActiveRecord::Schema.define(version: 20150124193911) do
     t.string   "contatos"
     t.datetime "inicio"
     t.datetime "fim"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
   create_table "usuarios", force: :cascade do |t|
