@@ -1,7 +1,10 @@
-<%= form_for @evento, :html => { :multipart => true} do |f| %>
+<%= simple_form_for @evento, :html => { :multipart => true} do |f| %>
+
+
+
   <% if @evento.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@evento.errors.count, "error") %> prohibited this evento from being saved:</h2>
+      <h2><%= pluralize(@evento.errors.count, "error") %> impedindo esse evento de ser gravado.:</h2>
 
       <ul>
       <% @evento.errors.full_messages.each do |message| %>
@@ -14,6 +17,11 @@
   <div class="field">
     <%= f.label :nome %><br>
     <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    
+    <%= f.association :campu , prompt: 'Selecione', label_method: :nome%><br>
+    
   </div>
   <div class="field">
     <%= f.label :descricao %><br>
