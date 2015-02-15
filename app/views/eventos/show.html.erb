@@ -30,7 +30,7 @@
 
 <p>
   <strong>Campus:</strong>
-  <%= @evento.campu.nome %>
+  <%= @evento.campu.try(:nome) %>
 </p>
 
 <p>

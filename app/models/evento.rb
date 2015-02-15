@@ -5,5 +5,6 @@ class Evento < ActiveRecord::Base
   validates :nome, presence: true
   validates :descricao, presence: true
   validates :local, presence: true
+  validates :campu, presence: true
   belongs_to :campu
 end
