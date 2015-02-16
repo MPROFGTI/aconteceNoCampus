@@ -7,6 +7,7 @@
     <tr>
       <th>Nome</th>
       <!-- <th>Descricao</th> -->
+      <th>Campus</th>
       <th>Local</th>
       <th>Cronograma</th>
       <th>Contatos</th>
@@ -21,6 +22,7 @@
       <tr>
         <td><%= evento.nome %></td>
         <!--<td><%= evento.descricao %></td> -->
+        <td><%= evento.campu.try(:nome) %></td>
         <td><%= evento.local %></td>
         <td><%= evento.cronograma %></td>
         <td><%= evento.contatos %></td>
