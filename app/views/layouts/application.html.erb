@@ -23,10 +23,7 @@
   </script>
 </head>
 <body> 
-  <ul><!--
-  <% %w[campus usuarios eventos].each do |controller_name| %> <li>
-  <%= link_to controller_name, controller: controller_name %> </li>
-  <% end %>-->
+  <ul>
   </ul><br /><br /><br />
 
 
@@ -45,7 +42,10 @@
       </div><!--/.nav-collapse -->
     </div>
   </nav>
-
+  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  
   <div class="container">    
     <%= yield %>
   </div>

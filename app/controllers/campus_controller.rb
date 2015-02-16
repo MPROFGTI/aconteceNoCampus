@@ -1,5 +1,6 @@
 class CampusController < ApplicationController
   before_action :set_campu, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
 
   # GET /campus
   # GET /campus.json
