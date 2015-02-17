@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
  
+  
+
   devise_for :admins
   #get 'eventos/index'
 
  # You can have the root of your site routed with "root"
   
+  namespace :admin do
+    resources :eventos
 
-  resources :eventos
+    resources :campus
 
-  resources :campus
-
-  resources :usuarios
+    resources :usuarios
+    
+    root 'eventos#index'
+  end
   
-  root 'eventos#index'
-
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

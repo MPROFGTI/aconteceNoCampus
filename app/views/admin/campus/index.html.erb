@@ -28,9 +28,9 @@
         <td><%= campu.uf %></td>
         <td><%= campu.telefone %></td>
         <td><%= campu.email %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', campu %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_campu_path(campu) %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', campu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', [:admin,campu] %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_admin_campu_path(campu) %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', [:admin,campu], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'Novo Campus', new_campu_path,  class: 'btn btn-primary'  %>
+<%= link_to 'Novo Campus', new_admin_campu_path,  class: 'btn btn-primary'  %>

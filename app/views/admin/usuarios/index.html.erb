@@ -28,9 +28,9 @@
         <td><%= usuario.confimaSenha %></td>-->
         <td><%= usuario.campus %></td>
         <td><%= usuario.perfil %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', usuario %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', [:admin,usuario] %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_admin_usuario_path(usuario) %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', [:admin,usuario], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'Novo Usuario', new_usuario_path, class: 'btn btn-primary' %>
+<%= link_to 'Novo Usuario', new_admin_usuario_path, class: 'btn btn-primary' %>

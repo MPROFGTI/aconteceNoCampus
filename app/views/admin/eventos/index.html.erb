@@ -28,9 +28,9 @@
         <td><%= evento.contatos %></td>
         <td><%= l evento.inicio %></td>
         <td><%= l evento.fim %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', evento %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_evento_path(evento) %></td>
-        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', evento, method: :delete, data: { confirm: 'Esta certo disso?' } %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Exibir', [:admin,evento] %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Editar', edit_admin_evento_path(evento) %></td>
+        <td class="btn btn-default btn-sm"><%= link_to 'Apagar', [:admin,evento], method: :delete, data: { confirm: 'Esta certo disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'Novo Evento', new_evento_path, class: 'btn btn-primary'  %>
+<%= link_to 'Novo Evento', new_admin_evento_path, class: 'btn btn-primary'  %>
